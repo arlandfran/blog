@@ -1,6 +1,8 @@
 # The URL the site will be built for
 base_url = "https://arland.dev"
 
+title = "arland.dev"
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
@@ -13,4 +15,9 @@ build_search_index = false
 highlight_code = true
 
 [extra]
-# Put all your custom variables here
+links = [
+    { title = "about", href = "" },
+    { title = "now", href = "" },
+    { title = "github", href = "" },
+    { title = "linkedin", href = "" },
+]
