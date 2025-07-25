@@ -2,6 +2,7 @@
   --foreground: #2f3136;
   --background: #e5e5e5;
   --secondary: #808080;
+  --tertiary: #f5c26b;
   --accent: #2764f3;
   --accent-highlight: #163c90;
 }
@@ -30,7 +31,7 @@ blockquote {
 }
 
 code {
-  background-color: var(--secondary);
+  background-color: var(--tertiary);
 }
 
 pre code {

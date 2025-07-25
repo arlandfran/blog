@@ -8,17 +8,35 @@ body {
 
 body {
   font-family: system-ui, sans-serif;
-  font-size: 18pt;
+  font-size: 18px;
   line-height: 1.3em;
   padding: 1rem;
 }
 
-.header-links {
-  a {
-    margin-right: 0.5em;
+.header-text {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.header-prompt {
+  color: var(--foreground) !important;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.header-links a {
+  margin-right: 0.5em;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
   }
 
-  a:last-of-type {
+  &:last-of-type {
     margin-right: 0;
   }
 }
@@ -41,7 +59,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-size: inherit;
+  font-size: inherit;
 }
 
 img {
@@ -55,7 +73,6 @@ blockquote {
 
 code {
   padding: 0.1em 0.2em;
-  font-size: 12pt;
 }
 
 pre {

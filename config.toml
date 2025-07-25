@@ -16,8 +16,8 @@ highlight_code = true
 
 [extra]
 links = [
-    { title = "about", href = "" },
-    { title = "now", href = "" },
-    { title = "github", href = "" },
-    { title = "linkedin", href = "" },
+    { title = "about", href = "/about" },
+    { title = "now", href = "/now" },
+    { title = "github", href = "https://github.com/arlandfran" },
+    { title = "linkedin", href = "https://linkedin.com/in/arlandtorres" },
 ]
