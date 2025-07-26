@@ -1,33 +1,33 @@
 {% extends "index.html" %}
 
-{% block title %}{{ page.title }}{% endblock title %}
-{% block description %}{{ page.description | default(value=config.description) }}{% endblock description %}
+{% block title %}
+  {% if page is defined %}
+    {{ config.title }} | {{ page.title }}
+  {% else %}
+    {{ config.title }}
+  {% endif %}
+{% endblock title %}
 
-{% block header_title %}{{ page.title }}{% endblock header_title %}
+{% block description %}
+  {% if page is defined %}
+    {{ page.description | default(value=config.description) }}
+  {% else %}
+    {{ config.description }}
+  {% endif %}
+{% endblock description %}
+
+{% block header_title %}
+  {% if page is defined %}
+    {{ page.title }}
+  {% else %}
+    ~/
+  {% endif %}
+{% endblock header_title %}
 
 {% block content %}
 <main>
-    {% if page.date or page.taxonomies %}
-    <p class="secondary small">
-        {% if page.date %}{{ page.date | date(format="%-d %B, %Y") }}{% endif %}
-
-        {% set_global sorted_taxonomies = [] %}
-        {% for taxonomy_name, _ in page.taxonomies %}
-        {% set_global sorted_taxonomies = sorted_taxonomies | concat(with=taxonomy_name) %}
-        {% endfor %}
-        {% set_global sorted_taxonomies = sorted_taxonomies | sort %}
-
-        {% for taxonomy_name in sorted_taxonomies %}
-        {% set terms = page.taxonomies[taxonomy_name] %}
-        - {{ taxonomy_name | capitalize }}:
-        {% for term_name in terms %}
-        {% set term = get_taxonomy_term(kind=taxonomy_name, term=term_name) %}
-        <a href="{{ term.permalink }}">{{ term.name }}</a>{% if not loop.last %},{% endif %}
-        {% endfor %}
-        {% endfor %}
-    </p>
-    {% endif %}
-    <div class="space"></div>
+  {% if page is defined %}
     {{ page.content | safe }}
+  {% endif %}
 </main>
 {% endblock content %}
