@@ -2,12 +2,10 @@
 title: "about"
 ---
 
-## who am i
+I'm Arland Torres, and I like building things that solve user problems (mostly mine). Here are a couple things about me:
 
-i'm arland torres, and i like building things that solve user problems (mostly mine), here are a couple things about me:
+- Currently work in tech retail
+- Full-stack JS/Python background
+- Diploma in Software Development from Code Institute — check out my CI portfolio here
 
-- currently work in tech retail
-- full-stack js/python background
-- diploma in software dev from code institute - check out my CI portfolio here
-
-this is my personal blog where i aim to write about my programming journey, weekend hacking, as well as general thoughts, brain dumps and explorations
+This is my personal blog, where I aim to write about my programming journey, weekend hacking, and general thoughts, brain dumps, and explorations
