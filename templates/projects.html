@@ -1,0 +1,19 @@
+{% extends "section.html" %}
+
+{% block title %}{{ config.title }} | {{ section.title }}{% endblock title %}
+
+{% block header_title %}{{ section.title }}{% endblock header_title %}
+
+{% block section_content %}
+  {% if section.pages %}
+    {% for projects in section.pages %}
+      <ul>
+        {% for project in projects %}
+          <li><a href="{{ post.permalink }}">{{ project.title }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  {% else %}
+    <p>No projects yet.</p>
+  {% endif %}
+{% endblock section_content %}

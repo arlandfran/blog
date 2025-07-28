@@ -1,8 +1,26 @@
 {% extends "index.html" %}
 
-{% block title %}{% if page is defined %}{{ config.title }} | {{ page.title }}{% else %}{{ config.title }}{% endif %}{% endblock title %}
-{% block description %}{% if page is defined %}{{ page.description | default(value=config.description) }}{% else %}{{ config.description }}{% endif %}{% endblock description %}
-{% block header_title %}{% if page is defined %}{{ page.title }}{% endif %}{% endblock header_title %}
+{% block title %}
+  {% if page is defined %}
+    {{ config.title }} | {{ page.title }}
+  {% else %}
+    {{ config.title }}
+  {% endif %}
+{% endblock title %}
+
+{% block description %}
+  {% if page is defined %}
+    {{ page.description | default(value=config.description) }}
+  {% else %}
+    {{ config.description }}
+  {% endif %}
+{% endblock description %}
+
+{% block header_title %}
+  {% if page is defined %}
+    {{ page.title }}
+  {% endif %}
+{% endblock header_title %}
 
 {% block content %}
 <main>
